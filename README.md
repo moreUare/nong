@@ -1,0 +1,2 @@
+# nong
+wechat repository
