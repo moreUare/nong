@@ -1,0 +1,196 @@
+/* pages/register/register.wxss */
+
+
+.custom-navbar{
+  width: 100%;
+  background-color: #ff6c05;
+}
+.palce-holder-nav{
+  width: 100%;
+}
+/****.title****/
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-content{
+  width: 160rpx;
+  margin-left: 40rpx;
+  color: #fff;
+  box-sizing: border-box;
+  
+}
+.center-content{
+  width: 160rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  box-sizing: border-box;
+ 
+}
+.right-content{
+  width: 160rpx;
+}
+.temp{
+  border-bottom: 2rpx solid #fff;
+}
+/**********************************************************/
+.signIn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signIn .logoImg{
+  margin-top: 62rpx;
+  margin-bottom: 30rpx;
+}
+.signIn .first-line, .signIn .second-line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 550rpx;
+  height: 108rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #e6e6e6;
+  margin-top: 26rpx;
+}
+.signIn .third-line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 550rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+
+  align-items: flex-end;
+
+  font-size: 26rpx;
+  color: #ff6c05;
+}
+.signIn .head{
+  margin-right: 24rpx;
+}
+.signIn input{
+  width: 450rpx;
+}
+
+/*********signUp****************/
+.signUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signUp .logoImg{
+  margin-top: 62rpx;
+  margin-bottom: 30rpx;
+}
+.signUp .first-line, .signUp .second-line, .signUp .third-line, .signUp .forth-line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 550rpx;
+  height: 108rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #e6e6e6;
+  margin-top: 26rpx;
+}
+.signUp .fifth-line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 550rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+
+  align-items: flex-end;
+
+  font-size: 26rpx;
+  color: #ff6c05;
+}
+.signUp .head{
+  margin-right: 24rpx;
+}
+.signUp input{
+  width: 450rpx;
+}
+/******mask*******/
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7
+}
+/******modal1*********/
+.warnTip1{
+  width: 462rpx;
+  height: 190rpx;
+  position: fixed;
+  top: 783rpx;
+  left: 50%;
+  margin-left: -231rpx;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.warnTip2{
+  width: 620rpx;
+  height: 192rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -96rpx;
+  margin-left: -310rpx;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.f-tip{
+  flex: 1;
+  line-height: 95rpx;
+  color: #ff6c05;
+  font-size: 42rpx;
+  font-weight: 600;
+  width: 462rpx;
+  border-bottom: 1px solid #b9b9b9;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+.s-tip{
+  flex: 1;
+  line-height: 95rpx;
+  color: #b9b9b9;
+  font-size: 38rpx;
+  letter-spacing: 2rpx;
+}
+.f-tip2{
+  flex: 1;
+  line-height: 95rpx;
+  color: #ff6c05;
+  font-size: 42rpx;
+  font-weight: 600;
+  width: 620rpx;
+  border-bottom: 1px solid #b9b9b9;
+  text-align: center;
+  letter-spacing: 4rpx;
+}
+.s-tip2{
+  flex: 1;
+  line-height: 95rpx;
+  color: #b9b9b9;
+  font-size: 38rpx;
+  letter-spacing: 2rpx;
+}

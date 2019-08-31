@@ -1,0 +1,77 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/**********************************/
+.container{
+  position: absolute;
+  top: 0px; bottom: 0px;
+  left: 0px; right: 0px;
+  padding: 0;
+  margin: 0
+}
+.contain{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center
+  
+}
+.imageDefault{
+  margin-top: 177rpx;
+  margin-bottom: 0rpx;
+}
+.second-line{
+  margin-top: 58rpx;
+  margin-bottom: 32rpx;
+  margin-left: -280rpx
+}
+.second-line .text1{
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+.third-line{
+  margin-bottom: 88rpx;
+  margin-left: -120rpx;
+}
+.third-line .tip{
+  margin-left: 14rpx;
+  margin-right: 14rpx;
+  margin-bottom: 5rpx;
+}
+.third-line .text2{
+  display: block;
+  float: right;
+  font-size: 26rpx;
+  color: #ccc
+}
+.button_confirm{
+  margin-top: 0rpx;
+  margin-bottom: 439rpx;
+}
+
+.buttom .first-words,.buttom .next-words{
+  color: #ccc;
+  text-decoration: line-through;
+}
+.buttom .second-words{
+  color: #ccc;
+  font-size: 30rpx;
+}

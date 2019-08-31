@@ -1,0 +1,26 @@
+<!--pages/bindSuccss/bindSuccss.wxml-->
+<view class="custom-navbar">
+  <view class="palce-holder-nav" style="height: {{navHeight}}px;"></view>
+
+  <view class="title" style="height: {{2.3*navHeight}}px;">
+
+    <navigator class="left-content" open-type="navigateBack">
+      <image src="../../images/forgetPassword/Returnbutton@2x.png" style="width: 16rpx; height: 30rpx;" class="returnButton"></image>
+      <view class="reback"> 返回</view>
+    </navigator>
+
+    <view class="center-content">
+      <view class="subject">绑定成功</view>
+    </view>
+    <view class="right-content"></view>
+  </view>
+</view>
+<!---------------------------------------------->
+<view class="bindSuccess">
+  <view class="logo">
+    <image src="../../images/bindSuccess/logoBind@2x.png" style="width: 161rpx; height: 154rpx;"></image>
+  </view>
+  <view class="butt" bindtap="rebackHomepage">
+    <image src="../../images/bindSuccess/returnHomePage@2x.png" style="width: 587rpx; height: 77rpx;"></image>
+  </view>
+</view>

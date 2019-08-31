@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="contain">
+    <view class="logoimage">
+      <image src="../../images/logo@2x.png" class="imageDefault" style="width: 119rpx;height: 238rpx"></image>
+    </view>
+    <view class="first-line">
+      <image src="../../images/line@2x.png" style="width: 584rpx;height:2rpx"></image>
+    </view>
+    <view class="second-line">
+      <view class="text1">请确定授权以下信息</view>
+    </view>
+    <view class="third-line">
+      <image src="../../images/yuan@2x.png" style="width: 19rpx; height: 19rpx;" class="tip"></image>
+      <view class="text2">获得你的公开信息（昵称、头像等）</view>
+    </view>
+    <view class="button_confirm" bindtap="authorize"><image src="../../images/Determineauthorization@2x.png" style="width:587rpx; height:77rpx"></image></view>   
+    <view class="buttom"><text class="first-words"><text style=" color: #fff">BAIBAI</text></text>  <text class="second-words">上海框子科技有限公司</text> <text class="next-words"><text style="color: #fff">BAIBAI</text></text></view>
+  </view>
+   
+
+  <!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  -->
+</view>

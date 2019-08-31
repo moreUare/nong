@@ -1,0 +1,85 @@
+/* pages/unbind/unbind.wxss */
+page{
+  background-color: #f7f7f7;
+}
+.custom-navbar{
+  width: 100%;
+  background-color: #ff6c05;
+}
+.palce-holder-nav{
+  width: 100%;
+}
+/****.title****/
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title .returnButton{
+  margin-left: 28rpx;
+  vertical-align: middle;
+}
+.title .reback{
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 100%;
+  margin-left: 19rpx;
+  display: inline-block;
+}
+.title .subject{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.left-content{
+  width: 160rpx;
+}
+.center-content{
+  width: 160rpx;
+}
+.right-content{
+  width: 160rpx;
+}
+
+/**********page-bd***********/
+.page-bd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-line{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  align-items: center;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+.second-line{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  align-items: center;
+  font-size: 30rpx;
+}
+.first-line .text, .second-line .text{
+  margin-left: 48rpx;
+}
+.first-line input, .second-line input{
+  width: 360rpx;
+  margin-left: 20rpx;
+}
+
+.third-line{
+  text-align: center;
+  margin-top: 58rpx;
+}

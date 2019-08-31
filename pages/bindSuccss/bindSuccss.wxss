@@ -1,0 +1,58 @@
+/* pages/bindSuccss/bindSuccss.wxss */
+.custom-navbar{
+  width: 100%;
+  background-color: #ff6c05;
+}
+.palce-holder-nav{
+  width: 100%;
+}
+/****.title****/
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title .returnButton{
+  margin-left: 28rpx;
+  vertical-align: middle;
+}
+.title .reback{
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 100%;
+  margin-left: 19rpx;
+  display: inline-block;
+}
+.title .subject{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.left-content{
+  width: 160rpx;
+}
+.center-content{
+  width: 160rpx;
+}
+.right-content{
+  width: 160rpx;
+}
+
+/***********************************/
+image{
+  vertical-align: middle;
+}
+.bindSuccess{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo{
+  margin-top: 152rpx;
+}
+.butt{
+  margin-top: 194rpx;
+}

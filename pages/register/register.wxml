@@ -1,0 +1,103 @@
+<!--已有账号登录--->
+<view class="custom-navbar">
+  <view class="palce-holder-nav" style="height: {{navHeight}}px;"></view>
+
+  <view class="title" style="height: {{2.3*navHeight}}px;">
+
+    <view class="left-content">
+    <view class="signInbutton" bindtap = "signIn" style="height: {{2.2*navHeight}}px; line-height: {{2.2*navHeight}}px; text-align: center; font-size: {{size1}}rpx; font-weight: {{fweight1}}; border-bottom: {{style1}};">登录账号</view>
+    </view>
+    <view class="center-content">
+      <view class="signUpbutton"  bindtap= "signUp" style="height: {{2.2*navHeight}}px; line-height: {{2.2*navHeight}}px; text-align: center; font-size: {{size2}}rpx; font-weight: {{fweight2}}; border-bottom: {{style2}}">注册账号</view>
+    </view>
+    <view class="right-content"></view>
+  </view>
+</view>
+<!-----------------登录账号---------------------->
+<view class="signIn" wx:if="{{chooseIn}}">
+  <view class="logoImg">
+    <image src="../../images/signIn/logo@2x.png" style="width: 119rpx; height: 238rpx;"></image>
+  </view>
+  <view class="page-bd">
+    <form>
+      <view class="first-line">
+        <image src="../../images/signIn/iphoneicon@2x.png" style="width: 24rpx; height: 34rpx;" class="head"></image>
+        <input type="number" placeholder="请输入手机号码"></input>
+      </view>    
+
+      <view class="second-line">
+        <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
+        <input type="password" placeholder="请输入密码"></input>
+        <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;"></image>
+      </view>
+
+      <view class="third-line">
+        <view bindtap="goSignUp">账号注册></view><view style="margin-left: 10rpx; margin-right: 10rpx;">|</view><view bindtap="goFPassword">忘记密码></view>
+      </view>
+
+      <view class="forth-line" style="margin-top: 30rpx;">
+        <image src="../../images/signIn/Sure@2x.png" style="width: 587rpx; height: 77rpx"></image>
+      </view>
+    </form>
+  </view>
+
+
+
+</view>
+
+<!-------------------注册账号--------------------->
+<view class="signUp" wx:if="{{chooseUp}}">
+<view class="logoImg">
+    <image src="../../images/signIn/logo@2x.png" style="width: 119rpx; height: 238rpx;"></image>
+  </view>
+  <view class="page-bd">
+    <form>
+      <view class="first-line">
+        <image src="../../images/signIn/iphoneicon@2x.png" style="width: 24rpx; height: 34rpx;" class="head"></image>
+        <input type="number" placeholder="请输入手机号码"></input>
+      </view>    
+
+      <view class="second-line">
+        <image src="../../images/signIn/VerificationCode@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
+        <input type="password" placeholder="请输入验证码"></input>
+        <image src="../../images/signIn/authentication@2x.png" style="width: 147rpx; height: 44rpx;"></image>
+      </view>
+
+      <view class="third-line">
+        <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
+        <input type="password" placeholder="请输入新密码"></input>
+        <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;" bindtap="modal1"></image>
+      </view>
+
+      <view class="forth-line">
+        <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
+        <input type="password" placeholder="请输入新密码"></input>
+        <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;"></image>
+      </view>
+      
+
+      <view class="fifth-line">
+        <view bindtap="goSignIn">已有账号登录></view>
+      </view>
+
+      <view class="sixth-line" style="margin-top: 30rpx;" bindtap="goRegiste">
+        <image src="../../images/signIn/Sure@2x.png" style="width: 587rpx; height: 77rpx"></image>
+      </view>
+    </form>
+  </view>
+
+  <!-------蒙版-------->
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal1 || showModal2}}"></view>
+  <!------模态框------>
+  <view class="warnTip1" wx:if="{{showModal2}}">
+    <view class="f-tip">提示</view>
+    <view class="s-tip">请检查后再输入</view>
+  </view>
+
+  <view class="warnTip2" wx:if="{{showModal1}}">
+    <view class="f-tip2">该手机号已绑定其他微信</view>
+    <view class="s-tip2"><text>继续将解除原绑定</text><image src="../../images/register/unbind@2x.png" style="width: 195rpx; height: 53rpx;"></image></view>
+  </view>
+</view>
+
+
