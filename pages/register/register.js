@@ -1,6 +1,8 @@
 // pages/register/register.js
 const app = getApp();
-
+var md5 = require('../../utils/md5');
+var urls = require('../../utils/url.js');
+var common = require('../../utils/Common.js');
 
 
 
@@ -10,7 +12,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showModal1: true,
+    phoneNumber: "",
+    verCodeSms: "",
+    password: "",
+    passwordAgain: "",
+
+    showModal1: false,
     showModal2: false,
 
     size1: "32",
@@ -26,6 +33,38 @@ Page({
     //从全局变量获取状态栏高度
     navHeight: app.globalData.navHeight,
   },
+
+  phoneInput: function(e){
+    var that = this;
+    var value = e.detail.value;
+    that.setData({
+      phoneNumber: value
+    })
+  },
+
+  //注册账号.获取验证码
+  sendVerCode: function(){
+    let phoneNumber = this.data.phoneNumber;
+    let codeType = 1;
+    let md5Password =  common.security(phoneNumber+""+codeType);
+    wx.request({
+      url: urls.wxVerCodeSms.sendVerCodeSms + "{" + phoneNumber + "}/" + "{" + codeType + "}/" + "{" + md5Password + "}",
+      success: res => {
+        console.log(res)
+      } 
+    })
+  
+  },
+  
+
+
+
+
+
+
+
+
+
 
   //登录账号
   signIn: function(event){

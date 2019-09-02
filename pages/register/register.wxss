@@ -191,6 +191,17 @@
   flex: 1;
   line-height: 95rpx;
   color: #b9b9b9;
-  font-size: 38rpx;
+  font-size: 36rpx;
   letter-spacing: 2rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.s-tip2 text{
+  margin-left: -20rpx;
+  margin-right: 20rpx;
+}
+.f-tip2 image{
+  display: block;
+  margin-right: -20rpx;
 }

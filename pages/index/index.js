@@ -1,21 +1,75 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var md5 = require('../../utils/md5');
+var urls = require('../../utils/url.js');
+var common = require('../../utils/Common.js');
 
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+    code: '',     //openid
+
+    securityStr: ""
+
   },
   //事件处理函数
 
   authorize: function(){
+    wx.getUserInfo({
+      success: function(res){
+        // console.log(res);
+      }
+    });
+    //跳转登录界面
     wx.navigateTo({
-      url: '../register/register'
-      // url:'../ForgetPassword/ForgetPassword'
-    })
+      url: '../register/register',
+    });
+    //
+    wx.login({
+      success: res=>{
+        console.log("code = " + res.code);
+        wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx1cb90d08d6d3c0a0&secret=73a14f7f80de0fe5a66b034f630b1766&js_code=' + res.code + '&grant_type=authorization_code',
+          success: res=>{
+            console.log('openid=' + res.data.openid);
+            this.setData({
+              code: res.data.openid
+            });
+            var md5Str = common.security(res.data.openid)  //md5编码
+            this.setData({
+              securityStr: md5Str
+            });
+          console.log('security=' + this.data.securityStr);
+          //调用微信登录接口
+            wx.request({            //  {wx_code}/{securityStr}
+              url: urls.wxLogin.sOCKET_USERLOGIN_WX + "{" + this.data.code + "}/" + "{" + this.data.securityStr + "}",
+              success: res => {
+                console.log("UserInfo_Result的值:");
+                console.log(res);      //返回值 userInfo_Result
+              }
+            })
+          }
+        }) 
+        /**/
+      }
+    });
+   
+
+    
+
+    
+    
+
+
+    // wx.request({
+    //   url: '',
+    // })
+
   },
 
 

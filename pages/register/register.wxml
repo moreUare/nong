@@ -54,24 +54,25 @@
     <form>
       <view class="first-line">
         <image src="../../images/signIn/iphoneicon@2x.png" style="width: 24rpx; height: 34rpx;" class="head"></image>
-        <input type="number" placeholder="请输入手机号码"></input>
+       
+        <input type="number" placeholder="请输入手机号码" value="{{phoneNumber}}" bindinput="phoneInput"></input>
       </view>    
 
       <view class="second-line">
         <image src="../../images/signIn/VerificationCode@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="password" placeholder="请输入验证码"></input>
-        <image src="../../images/signIn/authentication@2x.png" style="width: 147rpx; height: 44rpx;"></image>
+        <input type="number" placeholder="请输入验证码" value="{{verCodeSms}}"></input>
+        <image src="../../images/signIn/authentication@2x.png" style="width: 147rpx; height: 44rpx;" bindtap="sendVerCode"></image>
       </view>
 
       <view class="third-line">
         <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="password" placeholder="请输入新密码"></input>
+        <input type="password" placeholder="请输入新密码" value="{{password}}"></input>
         <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;" bindtap="modal1"></image>
       </view>
 
       <view class="forth-line">
         <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="password" placeholder="请输入新密码"></input>
+        <input type="password" placeholder="请输入新密码" value="{{passwordAgain}}"></input>
         <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;"></image>
       </view>
       
@@ -96,7 +97,9 @@
 
   <view class="warnTip2" wx:if="{{showModal1}}">
     <view class="f-tip2">该手机号已绑定其他微信</view>
-    <view class="s-tip2"><text>继续将解除原绑定</text><image src="../../images/register/unbind@2x.png" style="width: 195rpx; height: 53rpx;"></image></view>
+    <view class="s-tip2"><text>继续将解除原绑定</text>
+      <image src="../../images/register/unbind@2x.png" style="width: 195rpx; height: 53rpx;" class="unbindBut"></image>
+    </view>
   </view>
 </view>
 

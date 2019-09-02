@@ -14,7 +14,10 @@
       <image src="../../images/yuan@2x.png" style="width: 19rpx; height: 19rpx;" class="tip"></image>
       <view class="text2">获得你的公开信息（昵称、头像等）</view>
     </view>
-    <view class="button_confirm" bindtap="authorize"><image src="../../images/Determineauthorization@2x.png" style="width:587rpx; height:77rpx"></image></view>   
+    <!-- <view class="button_confirm"><image src="../../images/Determineauthorization@2x.png" style="width:587rpx; height:77rpx"></image></view>    -->
+
+    <button open-type="getUserInfo" style="width: 587rpx; height: 77rpx" class="btn button_confirm" bindtap="authorize"><text>确定授权</text></button>
+    
     <view class="buttom"><text class="first-words"><text style=" color: #fff">BAIBAI</text></text>  <text class="second-words">上海框子科技有限公司</text> <text class="next-words"><text style="color: #fff">BAIBAI</text></text></view>
   </view>
    

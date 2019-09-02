@@ -1,4 +1,16 @@
 /**index.wxss**/
+button::after{
+  border: none;
+  
+}
+.btn{
+  color: #fff;
+  background-color: #ff6c05;
+  border-radius: 100rpx;
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
