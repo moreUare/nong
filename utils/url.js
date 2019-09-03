@@ -16,8 +16,14 @@ var wxVerCodeSms = {
   "verifyCodeSms": baseUrl + "VerifyCodeSms/"
 }
 
+//wx注册
+var wxRegister = {
+  "userRegister": baseUrl + 'UserRegister/'
+}
+
 module.exports = {
   baseUrl: baseUrl,
   wxLogin: wxLogin,
-  wxVerCodeSms: wxVerCodeSms
+  wxVerCodeSms: wxVerCodeSms,
+  wxRegister : wxRegister
 }

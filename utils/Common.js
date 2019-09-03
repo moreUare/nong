@@ -11,6 +11,7 @@ var getDate = () => {
 const staffId = "^wangchenjiangengcheng$";
 var security = (par) => {
   let temp = getDate() + staffId;
+  console.log(md5(temp + par))
   //md5转换
   return md5(temp + par);
 }

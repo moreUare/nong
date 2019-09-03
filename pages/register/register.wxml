@@ -60,19 +60,19 @@
 
       <view class="second-line">
         <image src="../../images/signIn/VerificationCode@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="number" placeholder="请输入验证码" value="{{verCodeSms}}"></input>
+        <input type="number" placeholder="请输入验证码" value="{{verCodeSms}}" bindinput="verCodeSmsInput"></input>
         <image src="../../images/signIn/authentication@2x.png" style="width: 147rpx; height: 44rpx;" bindtap="sendVerCode"></image>
       </view>
 
       <view class="third-line">
         <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="password" placeholder="请输入新密码" value="{{password}}"></input>
+        <input type="password" placeholder="请输入新密码" value="{{password}}" bindinput="passwordInput1"></input>
         <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;" bindtap="modal1"></image>
       </view>
 
       <view class="forth-line">
         <image src="../../images/signIn/lock@2x.png" style="width: 26rpx; height: 30rpx" class="head"></image>
-        <input type="password" placeholder="请输入新密码" value="{{passwordAgain}}"></input>
+        <input type="password" placeholder="请输入新密码" value="{{passwordAgain}}" bindinput="passwordInput2"></input>
         <image src="../../images/signIn/eye@2x.png" style="width: 44rpx; height: 26rpx;"></image>
       </view>
       
